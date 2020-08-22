@@ -2,6 +2,7 @@ const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
 let isJumping = false;
 let position = 0;
+
 function handleKeyUp(event) {
     if (event.keyCode === 32) {
         if (!isJumping) {
@@ -18,7 +19,6 @@ function jump() {
     let upInterval = setInterval(() => {
         if(position >= 150 ) {
             clearInterval(upInterval);
-           
             //descendo
             let downInterval = setInterval(() => {
                 if(position <= 0) {
@@ -62,7 +62,6 @@ function createCactus() {
     }, 20);
 
     setTimeout(createCactus, randomTime);
-
 }
 
 createCactus();
